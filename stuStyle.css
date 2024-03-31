@@ -1,0 +1,589 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Khmer&display=swap");
+/* :root {
+  --color-light: white;
+  --border-radius-one: 15px;
+  --border-radius-two: 20px;
+  --primary-colore: dodgerblue;
+  --box-shadow-one: 0 0 5px rgb(202, 200, 200);
+} */
+html {
+  /* 62.5% of 16px = 10px */
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(245, 245, 245);
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a,
+p,
+li,
+span {
+  font-size: 2rem;
+}
+h1 {
+  font-size: 4.5rem;
+}
+h2,
+h3,
+h5 {
+  font-size: 3rem;
+}
+.container-width {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2.5rem;
+  margin-right: 2rem;
+  padding: 2rem;
+}
+.li-student {
+  background-color: dodgerblue;
+  border-radius: 4rem;
+  color: white;
+  padding: 0 1rem;
+}
+.icon-toggler {
+  display: none;
+  cursor: pointer;
+}
+.list {
+  cursor: pointer;
+}
+.list:hover {
+  color: dodgerblue;
+}
+.li-student:hover {
+  color: white;
+}
+.logo > a > img {
+  width: 150px;
+}
+
+.li-student:hover {
+  color: white;
+}
+.login {
+  color: rgb(0, 0, 0);
+  border: 0.05rem solid rgb(215, 215, 215);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  transition: background-color 0.2s;
+}
+.login:hover {
+  color: rgb(255, 255, 255);
+  background-color: dodgerblue;
+  border-color: dodgerblue;
+}
+.image-acc > img {
+  width: 5rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  height: 50px;
+  width: 520px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 0 1rem;
+  border-radius: 1rem;
+}
+.search-input {
+  width: 500px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-size: 2rem;
+}
+.search > button {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-size: 2rem;
+}
+.search > button:hover {
+  cursor: pointer;
+  color: dodgerblue;
+}
+
+.logo > a > img {
+  width: 130px;
+}
+.stu-contianer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.stuInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  background-color: dodgerblue;
+  margin-bottom: 1rem;
+  border-radius: 5rem;
+  padding: 1rem 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 930px;
+}
+.stuInfo > li {
+  color: white;
+  margin: 0;
+  width: 25%;
+}
+.stuInfo > .id {
+  width: 10%;
+}
+.stuInfo > .profile {
+  width: 10%;
+}
+.stuInfo > .name {
+  width: 25%;
+}
+.stuInfo > .tel {
+  width: 25%;
+}
+.stu1 {
+  background-color: rgb(255, 255, 255);
+  height: 60px;
+}
+.stu1 > li {
+  color: rgb(0, 0, 0);
+}
+.stu1 > li:hover {
+  color: dodgerblue;
+}
+.profile > img {
+  width: 5rem;
+  margin-top: 0.5rem;
+  border-radius: 50%;
+}
+.name-teg {
+  font-family: "Khmer", sans-serif;
+  font-weight: 550;
+  font-style: normal;
+}
+.footer-contianer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: inherit;
+  background: linear-gradient(to left, dodgerblue, rgb(255, 0, 179));
+  padding: 0.5rem 0;
+  margin-top: 5rem;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.footer-contianer > h2,
+.footer-contianer > p {
+  color: white;
+}
+.p-top {
+  width: 400px;
+  font-size: 1.5rem;
+  font-style: oblique;
+  text-align: center;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+.social > a {
+  font-size: 2.5rem;
+}
+.classM2 {
+  font-size: 3rem;
+}
+
+.p-bot {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+}
+.p-bot > a {
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 900px) {
+  .stuInfo {
+    width: 750px;
+  }
+}
+@media screen and (max-width: 890px) {
+  .stuInfo > li,
+  .tel > a,
+  .name-teg teg > a,
+  .fb > a {
+    font-size: 1.5rem;
+  }
+  .search {
+    height: 40px;
+    width: 490px;
+    border-radius: 5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .nav-container {
+    border-bottom: inherit;
+    margin-bottom: inherit;
+  }
+  .nav-container {
+    flex-wrap: wrap;
+    max-width: 750px;
+  }
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 1rem;
+    margin-bottom: 4rem;
+  }
+  .icon-toggler {
+    display: block;
+    margin-right: 1rem;
+  }
+  .nav-list.show {
+    display: flex;
+  }
+  .list {
+    width: 100%;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    border-radius: inherit;
+  }
+  .li-student {
+    background-color: inherit;
+  }
+  .li-student {
+    padding: 0;
+  }
+  .li-student > a {
+    background-color: dodgerblue;
+    border-radius: 3rem;
+    padding: 0 1rem;
+  }
+
+  .nav-list > li > a {
+    font-size: 1.5rem;
+  }
+  .logo > a > img {
+    width: 7rem;
+    margin-left: 1rem;
+  }
+  .nav-list > .login {
+    border: 0.05rem solid;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    transition: background-color 0.2s;
+  }
+  .login:hover {
+    color: white;
+    background-color: dodgerblue;
+  }
+  .noti-login > img {
+    width: 2.5rem;
+    margin-right: 1rem;
+  }
+  .icon-toggler > i {
+    font-size: 2rem;
+  }
+  .icon-toggler {
+    margin-right: 1rem;
+  }
+  .search {
+    height: 30px;
+    width: 390px;
+    border-radius: 5rem;
+  }
+  .search-input {
+    font-size: 1.2rem;
+  }
+  .search-btn > i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .stu-contianer {
+    width: 420px;
+  }
+  .stuInfo-main {
+    height: 30px;
+  }
+  .stuInfo > .teg {
+    display: flex;
+  }
+  .profile > img {
+    width: 2.5rem;
+    margin-top: 0.5rem;
+  }
+  .stu-list {
+    width: 430px;
+  }
+  .stuInfo {
+    padding: 0 1rem;
+    width: 95%;
+  }
+  .teg > a {
+    font-size: 0.9rem;
+  }
+  .fb > a {
+    font-size: 0.9rem;
+  }
+  .stuInfo > .fb {
+    display: flex;
+  }
+
+  .stuInfo > li {
+    font-size: 0.9rem;
+  }
+  .tel > a {
+    font-size: 0.9rem;
+  }
+  .stuInfo > .profile {
+    width: 12%;
+    margin-bottom: 0.2rem;
+  }
+  .stuInfo > .id {
+    width: 10%;
+  }
+  .stuInfo > .name {
+    width: 30%;
+  }
+  .stuInfo {
+    height: 25px;
+    border-radius: 5rem;
+  }
+  .stuInfo > .tel {
+    width: 35%;
+  }
+  .stu1 {
+    height: 30px;
+    border-radius: 5rem;
+  }
+  .nav-container > h2 {
+    display: none;
+  }
+
+  .nav-mainList {
+    display: none;
+  }
+
+  .icon-toggler > i {
+    display: block;
+    margin-right: 0.5rem;
+  }
+  .nav-list-top.show {
+    display: flex;
+  }
+  .list-top {
+    width: 100%;
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+  .footer-contianer > h2,
+  .footer-contianer > p {
+    color: white;
+  }
+  .p-top {
+    width: 400px;
+    font-size: 1rem;
+    font-style: oblique;
+    text-align: center;
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 2rem;
+  }
+  .social > a {
+    font-size: 2rem;
+  }
+  .classM2 {
+    font-size: 2rem;
+  }
+
+  .p-bot {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  .p-bot > a {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .search {
+    height: 30px;
+    width: 330px;
+    border-radius: 5rem;
+  }
+  .search-input {
+    font-size: 1.2rem;
+  }
+  .search-btn > i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .stu-contianer {
+    margin-left: 1rem;
+    width: 370px;
+  }
+  .stuInfo-main {
+    width: 370px;
+    height: 25px;
+    border-radius: 5rem;
+  }
+  .stu1 {
+    width: 370px;
+    height: 30px;
+    border-radius: 5rem;
+  }
+  .stuInfo > .teg {
+    display: flex;
+  }
+  .profile > img {
+    width: 2.5rem;
+    margin-top: 0.5rem;
+  }
+  .stuInfo {
+    padding: 0 0.3rem;
+  }
+  .teg > a {
+    font-size: 0.7rem;
+  }
+  .fb > a {
+    font-size: 0.7rem;
+  }
+  .stuInfo > .fb {
+    display: flex;
+  }
+  .stu-list {
+    width: 360px;
+  }
+  .stuInfo > li {
+    font-size: 0.8rem;
+  }
+  .tel > a {
+    font-size: 0.8rem;
+  }
+  .stuInfo > .profile {
+    width: 14%;
+    margin-bottom: 0.2rem;
+  }
+  .stuInfo > .id {
+    width: 11%;
+  }
+  .stuInfo > .name {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 370px) {
+  .logo > a > img {
+    width: 6rem;
+    margin-left: 1rem;
+  }
+  .noti-login > img {
+    width: 2.5rem;
+    margin-right: 1rem;
+  }
+  .icon-toggler > i {
+    font-size: 2.5rem;
+  }
+  .search {
+    height: 30px;
+    width: 330px;
+    border-radius: 5rem;
+  }
+  .search-input {
+    font-size: 1.2rem;
+  }
+  .search-btn > i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .stu-contianer {
+    margin-left: 1.5rem;
+    width: 330px;
+  }
+  .stuInfo-main {
+    width: 330px;
+    height: 25px;
+    border-radius: 5rem;
+  }
+  .stu1 {
+    width: 330px;
+    height: 30px;
+    border-radius: 5rem;
+  }
+  .stuInfo > .teg {
+    display: flex;
+  }
+  .profile > img {
+    width: 2.5rem;
+    margin-top: 0.5rem;
+  }
+  .stuInfo {
+    padding: 0 0.3rem;
+  }
+  .teg > a {
+    font-size: 0.7rem;
+  }
+  .fb > a {
+    font-size: 0.7rem;
+  }
+  .stuInfo > .fb {
+    display: flex;
+  }
+  .stu-list {
+    width: 360px;
+  }
+  .stuInfo > li {
+    font-size: 0.8rem;
+  }
+  .tel > a {
+    font-size: 0.8rem;
+  }
+  .stuInfo > .profile {
+    width: 14%;
+    margin-bottom: 0.2rem;
+  }
+  .stuInfo > .id {
+    width: 11%;
+  }
+  .stuInfo > .name {
+    width: 35%;
+  }
+}

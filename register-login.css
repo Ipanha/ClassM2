@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+/* :root {
+  --color-light: white;
+  --border-radius-one: 15px;
+  --border-radius-two: 20px;
+  --primary-colore: dodgerblue;
+  --box-shadow-one: 0 0 5px rgb(202, 200, 200);
+} */
+html {
+  /* 62.5% of 16px = 10px */
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url("image/tnaot_bg.webp") no-repeat;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a,
+p,
+li,
+span {
+  font-size: 2rem;
+}
+h1 {
+  font-size: 4.5rem;
+}
+h2,
+h3,
+h5 {
+  font-size: 3rem;
+}
+/* Body background */
+
+/* container withd */
+.container-width {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px rgb(255, 255, 255);
+  margin-bottom: 5rem;
+}
+.logo > a > img {
+  width: 150px;
+}
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2.5rem;
+  margin-right: 2rem;
+  color: white;
+}
+
+.icon-toggler {
+  display: none;
+  cursor: pointer;
+}
+.list {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.list:hover {
+  color: rgb(0, 0, 0);
+}
+.login {
+  color: white;
+  border: 0.05rem solid;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  transition: background-color 0.2s;
+}
+.login:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border-color: white;
+}
+/* Grid Login */
+.grid-login {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.left-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+.left-login h2 {
+  width: 500px;
+  text-align: center;
+  margin-left: 15rem;
+}
+.right-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  margin-right: 15rem;
+}
+
+.right-login {
+  position: relative;
+  height: 440px;
+}
+.form-box {
+  height: 440px;
+  width: 400px;
+  background: transparent;
+  border: 2px solid rgba(225, 225, 225, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-box h2 {
+  font-size: 3rem;
+  color: #ffffff;
+  text-align: center;
+}
+.register-box {
+  height: 500px;
+}
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #ffffff;
+  margin: 30px 0;
+}
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translate(-50%);
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.input-box .email {
+  left: 20px;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: 1.3em;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  top: 20px;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+.remember-forgot {
+  font-size: 0.9em;
+  color: #ffffff;
+  font-weight: 500px;
+  margin: -15px 0 15px;
+}
+.check-box {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.check-box label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5em;
+  cursor: pointer;
+  outline: none;
+}
+.check-box > a {
+  font-size: 1.5em;
+}
+.btn-submit-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-submit-login button {
+  width: 100%;
+  height: 2.5em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #162938;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.login-register p,
+.login-register a {
+  margin: 2rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+.login-register a {
+  font-weight: bold;
+}
+.icon-toggler {
+  color: white;
+}
+@media screen and (max-width: 885px) {
+  body {
+    height: 100vh;
+  }
+  .grid-login {
+    width: 800px;
+    gap: 1rem;
+    position: relative;
+    left: 4rem;
+  }
+  .left-login > h2 {
+    margin: 0;
+    width: 350px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .grid-login {
+    left: 2rem;
+  }
+}
+@media screen and (max-width: 770px) {
+  .grid-login {
+    left: 0rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  body {
+    height: 1300px;
+  }
+  .nav-container {
+    border-bottom: inherit;
+    margin-bottom: inherit;
+  }
+  .nav-container {
+    flex-wrap: wrap;
+    max-width: 750px;
+  }
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 1rem;
+    margin-bottom: 4rem;
+  }
+  .icon-toggler {
+    display: block;
+    margin-right: 1rem;
+  }
+  .nav-list.show {
+    display: flex;
+  }
+  .list {
+    width: 100%;
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+  .li-home {
+    background-color: inherit;
+
+    padding: 0;
+  }
+  .li-home > a {
+    border-radius: 3rem;
+  }
+  .logo > a > img {
+    width: 10rem;
+  }
+  .grid-login {
+    height: 100vh;
+    grid-template-columns: repeat(1, 2fr);
+    right: 20rem;
+    gap: 0;
+  }
+  .left-login > h2 {
+    margin-right: 12em;
+    width: 350px;
+  }
+  .right-login > .form-box {
+    margin-right: 22em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .left-login > h2 {
+    margin-right: 13em;
+  }
+  .right-login > .form-box {
+    margin-right: 26em;
+    width: 380px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .left-login > h2 {
+    margin-right: 14em;
+  }
+  .right-login > .form-box {
+    margin-right: 27.5em;
+    width: 360px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .left-login > h2 {
+    margin-right: 14.5em;
+  }
+  .right-login > .form-box {
+    margin-right: 29em;
+    width: 350px;
+  }
+}
