@@ -241,7 +241,10 @@ h5 {
 }
 @media screen and (max-width: 1024px) {
   body {
-    height: 100vh;
+    
+  height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
   }
   .grid-login {
     width: 800px;
@@ -256,7 +259,9 @@ h5 {
 }
 @media screen and (max-width: 885px) {
   body {
-    height: 100vh;
+  height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
   }
   .grid-login {
     width: 800px;
@@ -282,6 +287,8 @@ h5 {
 @media screen and (max-width: 430px) {
   body {
     height: 1300px;
+  max-width: 100%;
+  overflow-x: hidden;
   }
   .nav-container {
     border-bottom: inherit;
