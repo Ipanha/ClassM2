@@ -286,7 +286,7 @@ h5 {
 }
 @media screen and (max-width: 430px) {
   body {
-    height: 1300px;
+  height: 100vh;
   max-width: 100%;
   overflow-x: hidden;
   }
