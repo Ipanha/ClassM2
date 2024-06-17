@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+/* :root {
+  --color-light: white;
+  --border-radius-one: 15px;
+  --border-radius-two: 20px;
+  --primary-colore: dodgerblue;
+  --box-shadow-one: 0 0 5px rgb(202, 200, 200);
+} */
+html {
+  /* 62.5% of 16px = 10px */
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(245, 245, 245);
+  height: auto;
+  touch-action: pan-y;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a,
+p,
+li,
+span {
+  font-size: 2rem;
+}
+h1 {
+  font-size: 4.5rem;
+}
+h2,
+h3,
+h5 {
+  font-size: 3rem;
+}
+/* container withd */
+.container-width {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px rgb(141, 141, 141);
+  margin-bottom: 5rem;
+}
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2.5rem;
+  margin-right: 2rem;
+}
+.li-home > a {
+  background-color: dodgerblue;
+  padding: 0 1rem;
+  border-radius: 3rem;
+  color: white;
+}
+.icon-toggler {
+  display: none;
+  cursor: pointer;
+}
+.list {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.list:hover {
+  color: dodgerblue;
+}
+.login {
+  border: 0.05rem solid;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  transition: background-color 0.2s;
+}
+.login:hover {
+  color: white;
+  background-color: dodgerblue;
+}
+.logo > a > img {
+  width: 150px;
+}
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  padding: 0 2rem;
+  height: 550px;
+}
+.left-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.left-grid > h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(to left, dodgerblue, red);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.left-grid > p {
+  margin: 2rem 2rem;
+}
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 22rem;
+  margin-left: 2rem;
+}
+.register > span {
+  margin-top: 5rem;
+}
+.input-register {
+  padding: 1rem;
+  height: 4rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 25rem;
+  font-size: 2rem;
+  box-shadow: 1px 3px 5px rgb(218, 216, 216);
+}
+/* Send Button */
+
+.register > button {
+  margin-top: 5rem;
+  font-size: 2rem;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 5px 0;
+  background-color: dodgerblue;
+  cursor: pointer;
+}
+.register > .forget-pass {
+  font-size: 1.5rem;
+}
+.register > .forget-pass:hover {
+  color: dodgerblue;
+}
+.register > .sign-up {
+  background-color: rgb(10, 180, 10);
+}
+.right-grid {
+  position: relative;
+  width: 400px;
+  height: 100%;
+}
+.image {
+  width: 400px;
+  height: 55%;
+  position: relative;
+  overflow: hidden;
+  top: 10rem;
+  border-radius: 15px;
+}
+.image > img {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+.image > img:not(.active) {
+  left: -100%;
+}
+.btn-container {
+  position: absolute;
+  top: 43%;
+  width: 100%;
+}
+.btn-container > button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  backdrop-filter: blur(50px);
+  background-color: rgb(247, 228, 228);
+  box-shadow: 0 0 50px rgb(218, 216, 216);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: gray;
+  font-size: 1.5rem;
+}
+.btn-container > button:hover {
+  color: rgb(100, 100, 100);
+  box-shadow: 0 0 30px rgb(221, 221, 221);
+  background: rgb(245, 245, 245);
+}
+.btn-container > button:first-child {
+  position: absolute;
+  z-index: 100;
+  left: 5px;
+}
+.btn-container > button:last-child {
+  position: absolute;
+  z-index: 100;
+  right: 5px;
+}
+.dots-container {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 115px;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(50px);
+  background: rgb(0, 0, 0, 0.5);
+  border-radius: 100px;
+  padding: 5px 0;
+  gap: 0.5rem;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgb(229, 230, 231);
+  transition: all 0.2s ease-out;
+}
+.dot.active {
+  width: 40px;
+  border-radius: 100px;
+  background-color: aliceblue;
+}
+@keyframes nextOut {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes nextIn {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes prevOut {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes prevIn {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+.footer-container {
+  margin-top: 7rem;
+  height: 100px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  border-radius: 5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  background-color: white;
+  box-shadow: 1px 2px 5px rgb(218, 216, 216);
+}
+.scedule {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  height: 40px;
+  width: 160px;
+  border: 1px solid gray;
+  border-radius: 2rem;
+}
+.professor {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  height: 40px;
+  width: 160px;
+  border: 1px solid gray;
+  border-radius: 5rem;
+}
+.curse {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  height: 40px;
+  width: 160px;
+  border: 1px solid gray;
+  border-radius: 5rem;
+}
+.scedule > i {
+  font-size: 3rem;
+  margin: 2rem;
+}
+.professor > i {
+  font-size: 3rem;
+  margin: 2rem;
+}
+.curse > i {
+  font-size: 3rem;
+  margin: 2rem;
+}
+h4 {
+  font-size: 1.7rem;
+}
+@media screen and (max-width: 900px) {
+  .nav-container {
+    border-bottom: inherit;
+    margin-bottom: inherit;
+  }
+  .nav-container {
+    flex-wrap: wrap;
+    max-width: 750px;
+  }
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 1rem;
+    margin-bottom: 4rem;
+  }
+  .icon-toggler {
+    display: block;
+    margin-right: 1rem;
+  }
+  .nav-list.show {
+    display: flex;
+  }
+  .list {
+    width: 100%;
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+  .li-home {
+    background-color: inherit;
+
+    padding: 0;
+  }
+  .li-home > a {
+    background-color: dodgerblue;
+    padding: 0 1rem;
+    border-radius: 3rem;
+  }
+  .login {
+    color: rgb(0, 0, 0);
+    border: 0.05rem solid rgb(215, 215, 215);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    transition: background-color 0.2s;
+  }
+  .login:hover {
+    color: rgb(255, 255, 255);
+    background-color: dodgerblue;
+    border-color: dodgerblue;
+  }
+  .grid1 {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin-bottom: 30rem;
+  }
+  .left-grid {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .left-grid > h2 {
+    font-size: 6rem;
+  }
+  .left-grid > p {
+    max-width: 750px;
+    margin: 2rem 5rem;
+  }
+  .register {
+    margin-right: 41rem;
+  }
+  .right-grid {
+    display: flex;
+    justify-content: center;
+    width: 750px;
+    height: 380px;
+  }
+  .image {
+    width: 600px;
+    height: 100%;
+    top: inherit;
+  }
+  .grid2 {
+    max-width: 750px;
+    border-radius: 25px;
+    position: relative;
+    top: -60px;
+  }
+  .max-900 > h4 {
+    font-size: 1.5rem;
+  }
+  .max-900 > i {
+    font-size: 2rem;
+  }
+  .btn-container > button {
+    width: 60px;
+    height: 60px;
+    font-size: 2.5rem;
+  }
+  .btn-container > button:first-child {
+    left: 5px;
+  }
+  .btn-container > button:last-child {
+    right: 5px;
+  }
+  .dot {
+    width: 15px;
+    height: 15px;
+  }
+  .dots-container {
+    bottom: 10px;
+    left: 50%;
+    width: 135px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .nav-container {
+    max-width: 350px;
+  }
+  .logo > a > img {
+    width: 100px;
+  }
+  .left-grid > h2 {
+    font-size: 3rem;
+  }
+  .left-grid > p {
+    font-size: 2rem;
+    width: 350px;
+    padding: 0 1rem;
+  }
+  .left-grid > .register {
+    margin-left: 14rem;
+  }
+  .register {
+    margin-right: 22rem;
+  }
+  .right-grid {
+    position: relative;
+    width: 360px;
+    height: 255px;
+    left: 12.5rem;
+  }
+  .image {
+    width: 340px;
+    height: 100%;
+  }
+  .grid2 {
+    grid-template-columns: repeat(2, 2fr);
+    height: 120px;
+    border-radius: 25px;
+    width: 345px;
+  }
+  .max-900 > h4 {
+    font-size: 1.3rem;
+  }
+  .max-900 > i {
+    font-size: 1.4rem;
+  }
+  .btn-container > button {
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+  }
+  .btn-container > button:first-child {
+    left: 15px;
+  }
+  .btn-container > button:last-child {
+    right: 15px;
+  }
+  .dot {
+    width: 7px;
+    height: 7px;
+  }
+  .dots-container {
+    bottom: 5px;
+    left: 50%;
+    width: 100px;
+  }
+}
